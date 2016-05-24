@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C397BA71CF4A2EB00F2C262 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C397BA61CF4A2EB00F2C262 /* UIView+AutoLayout.swift */; };
 		7C9E2E421CF1A37A00AAE465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E2E411CF1A37A00AAE465 /* AppDelegate.swift */; };
 		7C9E2E441CF1A37A00AAE465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E2E431CF1A37A00AAE465 /* ViewController.swift */; };
 		7C9E2E491CF1A37A00AAE465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C9E2E481CF1A37A00AAE465 /* Assets.xcassets */; };
@@ -19,6 +20,8 @@
 		7C9E2E821CF1AB1900AAE465 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E2E811CF1AB1900AAE465 /* MainViewController.swift */; };
 		7C9E2E851CF1C33600AAE465 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C9E2E841CF1C33600AAE465 /* MainVCSettings.json */; };
 		7CF06B601CF1C3880086A4B4 /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF06B5F1CF1C3880086A4B4 /* NullViewController.swift */; };
+		7CF06B621CF1EF810086A4B4 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF06B611CF1EF810086A4B4 /* BaseTableViewController.swift */; };
+		7CF06B641CF1FA960086A4B4 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF06B631CF1FA960086A4B4 /* VisitorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C397BA61CF4A2EB00F2C262 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		7C9E2E3E1CF1A37A00AAE465 /* 微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9E2E411CF1A37A00AAE465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C9E2E431CF1A37A00AAE465 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 		7C9E2E811CF1AB1900AAE465 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7C9E2E841CF1C33600AAE465 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 		7CF06B5F1CF1C3880086A4B4 /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
+		7CF06B611CF1EF810086A4B4 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		7CF06B631CF1FA960086A4B4 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +182,8 @@
 			children = (
 				7C9E2E831CF1C32E00AAE465 /* Resource */,
 				7C9E2E811CF1AB1900AAE465 /* MainViewController.swift */,
+				7CF06B611CF1EF810086A4B4 /* BaseTableViewController.swift */,
+				7CF06B631CF1FA960086A4B4 /* VisitorView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -199,6 +207,7 @@
 		7C9E2E761CF1A9D300AAE465 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				7C397BA61CF4A2EB00F2C262 /* UIView+AutoLayout.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -344,13 +353,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CF06B621CF1EF810086A4B4 /* BaseTableViewController.swift in Sources */,
 				7C9E2E821CF1AB1900AAE465 /* MainViewController.swift in Sources */,
 				7C9E2E801CF1AAEB00AAE465 /* ProfileTableViewController.swift in Sources */,
 				7C9E2E7A1CF1AA9400AAE465 /* HomeTableViewController.swift in Sources */,
 				7C9E2E441CF1A37A00AAE465 /* ViewController.swift in Sources */,
 				7C9E2E7C1CF1AAA700AAE465 /* DiscoverTableViewController.swift in Sources */,
 				7CF06B601CF1C3880086A4B4 /* NullViewController.swift in Sources */,
+				7CF06B641CF1FA960086A4B4 /* VisitorView.swift in Sources */,
 				7C9E2E7E1CF1AAB800AAE465 /* MessageTableViewController.swift in Sources */,
+				7C397BA71CF4A2EB00F2C262 /* UIView+AutoLayout.swift in Sources */,
 				7C9E2E421CF1A37A00AAE465 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
