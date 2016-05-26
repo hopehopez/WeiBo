@@ -8,8 +8,54 @@
 
 import UIKit
 
-class VisitorView: UIView {
+// Swift中如何定义协议: 必须遵守NSObjectProtocol
+protocol VisitorViewDelegate: NSObjectProtocol{
+    // 登录回调
+    func loginBtnWillClick()
+    // 注册回调
+    func registerBtnWillClick()
+}
 
+class VisitorView: UIView {
+    
+    // 定义一个属性保存代理对象
+    // 一定要加上weak, 避免循环引用
+    weak var delegate: VisitorViewDelegate?
+    
+    func setUpVisitorInfo(isHome: Bool, imageName: String, message: String) {
+        //不是首页就隐藏转盘
+        iconView.hidden = !isHome
+        homeIcon.image = UIImage(named: imageName)
+        messageLabel.text = message
+        
+        if isHome {
+            startAnimation()
+        }
+    }
+    func loginBtnClick(){
+        //        print(__FUNCTION__)
+        delegate?.loginBtnWillClick()
+    }
+    func registerBtnClick(){
+        //        print(__FUNCTION__)
+        delegate?.registerBtnWillClick()
+    }
+
+    
+    private func startAnimation() {
+        //1.创建动画
+        let animation = CABasicAnimation(keyPath: "transform.rotation")
+        //2.设置动画属性
+        animation.toValue = 2 * M_PI
+        animation.duration = 20
+        animation.repeatCount = MAXFLOAT
+        //动画执行完后是否移除
+        animation.removedOnCompletion = false
+        
+        //3.将动画添加到图层上
+        iconView.layer.addAnimation(animation, forKey: nil)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -68,6 +114,7 @@ label.textColor = UIColor.darkGrayColor()
         btn.setTitle("登录", forState: UIControlState.Normal)
         btn.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
         btn.setBackgroundImage(UIImage(named: "common_button_white_disable"), forState: UIControlState.Normal)
+        btn.addTarget(self, action: "loginBtnClick", forControlEvents:UIControlEvents.TouchUpInside)
         return btn
     }()
     //注册按钮
@@ -76,6 +123,7 @@ label.textColor = UIColor.darkGrayColor()
         btn.setTitle("注册", forState: UIControlState.Normal)
         btn.setTitleColor(UIColor.orangeColor(), forState: UIControlState.Normal)
         btn.setBackgroundImage(UIImage(named: "common_button_white_disable"), forState: UIControlState.Normal)
+        btn.addTarget(self, action: "registerBtnClick", forControlEvents: UIControlEvents.TouchUpInside)
         return btn
     }()
     

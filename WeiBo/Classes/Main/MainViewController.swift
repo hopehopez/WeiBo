@@ -14,7 +14,7 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
         //设置当前控制器对应的tabbar的颜色
         //注意: 如果iOS7以前如果设置了tintcolor只有文字会变, 而图片不会变
-        tabBar.tintColor = UIColor.orangeColor()
+        //tabBar.tintColor = UIColor.orangeColor()
         
         addChildViewControllers()
     }
