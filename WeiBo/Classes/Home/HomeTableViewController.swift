@@ -22,13 +22,18 @@ class HomeTableViewController: BaseTableViewController {
         //2.初始化导航条
         setupNav()
     }
-
-    
     private func setupNav() {
-        //1. 左边按钮
+        //1. 初始化左右按钮
         navigationItem.leftBarButtonItem = UIBarButtonItem.createBarButtonItem("navigationbar_friendattention", target: self, action: "leftItemClick")
-        //2. 右边按钮
         navigationItem.rightBarButtonItem = UIBarButtonItem.createBarButtonItem("navigationbar_pop", target: self, action: "rightItemClick")
+        
+        //2.初始化标题按钮
+        let titleBtn = TitleButton()
+        titleBtn.setTitle("即可江南", forState: UIControlState.Normal)
+        
+        titleBtn.addTarget(self, action: "titleBtnClick:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        navigationItem.titleView = titleBtn
     }
     
     func leftItemClick() {
@@ -36,6 +41,9 @@ class HomeTableViewController: BaseTableViewController {
     }
     func rightItemClick() {
         print("点了右边的")
+    }
+    func titleBtnClick(btn: UIButton) {
+        btn.selected = !btn.selected;
     }
    
 }
