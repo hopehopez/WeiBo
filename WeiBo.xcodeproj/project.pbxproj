@@ -22,6 +22,7 @@
 		7CF06B601CF1C3880086A4B4 /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF06B5F1CF1C3880086A4B4 /* NullViewController.swift */; };
 		7CF06B621CF1EF810086A4B4 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF06B611CF1EF810086A4B4 /* BaseTableViewController.swift */; };
 		7CF06B641CF1FA960086A4B4 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF06B631CF1FA960086A4B4 /* VisitorView.swift */; };
+		7CFB61811CF97B8D0016231A /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB61801CF97B8D0016231A /* UIBarButtonItem+Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		7CF06B5F1CF1C3880086A4B4 /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
 		7CF06B611CF1EF810086A4B4 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		7CF06B631CF1FA960086A4B4 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		7CFB61801CF97B8D0016231A /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		7C9E2E701CF1A9D300AAE465 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7CFB61801CF97B8D0016231A /* UIBarButtonItem+Category.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				7C9E2E7C1CF1AAA700AAE465 /* DiscoverTableViewController.swift in Sources */,
 				7CF06B601CF1C3880086A4B4 /* NullViewController.swift in Sources */,
 				7CF06B641CF1FA960086A4B4 /* VisitorView.swift in Sources */,
+				7CFB61811CF97B8D0016231A /* UIBarButtonItem+Category.swift in Sources */,
 				7C9E2E7E1CF1AAB800AAE465 /* MessageTableViewController.swift in Sources */,
 				7C397BA71CF4A2EB00F2C262 /* UIView+AutoLayout.swift in Sources */,
 				7C9E2E421CF1A37A00AAE465 /* AppDelegate.swift in Sources */,
