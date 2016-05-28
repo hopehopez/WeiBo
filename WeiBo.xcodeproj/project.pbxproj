@@ -24,6 +24,8 @@
 		7CF06B641CF1FA960086A4B4 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF06B631CF1FA960086A4B4 /* VisitorView.swift */; };
 		7CFB61811CF97B8D0016231A /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB61801CF97B8D0016231A /* UIBarButtonItem+Category.swift */; };
 		7CFB61851CF98BE70016231A /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB61841CF98BE70016231A /* TitleButton.swift */; };
+		7CFB61881CF99AA00016231A /* PopoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CFB61871CF99AA00016231A /* PopoverViewController.storyboard */; };
+		7CFB618A1CF99F300016231A /* PopoverPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB61891CF99F300016231A /* PopoverPresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		7CF06B631CF1FA960086A4B4 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		7CFB61801CF97B8D0016231A /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
 		7CFB61841CF98BE70016231A /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
+		7CFB61871CF99AA00016231A /* PopoverViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PopoverViewController.storyboard; sourceTree = "<group>"; };
+		7CFB61891CF99F300016231A /* PopoverPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverPresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,7 @@
 		7C9E2E721CF1A9D300AAE465 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7CFB61861CF99A7E0016231A /* Popover */,
 				7C9E2E791CF1AA9400AAE465 /* HomeTableViewController.swift */,
 			);
 			path = Home;
@@ -225,6 +230,15 @@
 				7C9E2E841CF1C33600AAE465 /* MainVCSettings.json */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		7CFB61861CF99A7E0016231A /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				7CFB61871CF99AA00016231A /* PopoverViewController.storyboard */,
+				7CFB61891CF99F300016231A /* PopoverPresentationController.swift */,
+			);
+			path = Popover;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CFB61881CF99AA00016231A /* PopoverViewController.storyboard in Resources */,
 				7C9E2E851CF1C33600AAE465 /* MainVCSettings.json in Resources */,
 				7C9E2E491CF1A37A00AAE465 /* Assets.xcassets in Resources */,
 			);
@@ -372,6 +387,7 @@
 				7C397BA71CF4A2EB00F2C262 /* UIView+AutoLayout.swift in Sources */,
 				7CFB61851CF98BE70016231A /* TitleButton.swift in Sources */,
 				7C9E2E421CF1A37A00AAE465 /* AppDelegate.swift in Sources */,
+				7CFB618A1CF99F300016231A /* PopoverPresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
