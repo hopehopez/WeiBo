@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7C07468C1CFAE95300DA88AB /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C07468B1CFAE95300DA88AB /* PopoverViewController.swift */; };
+		7C07468E1CFAEF0400DA88AB /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C07468D1CFAEF0400DA88AB /* PopoverAnimator.swift */; };
 		7C397BA71CF4A2EB00F2C262 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C397BA61CF4A2EB00F2C262 /* UIView+AutoLayout.swift */; };
 		7C9E2E421CF1A37A00AAE465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E2E411CF1A37A00AAE465 /* AppDelegate.swift */; };
 		7C9E2E441CF1A37A00AAE465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E2E431CF1A37A00AAE465 /* ViewController.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		7C07468B1CFAE95300DA88AB /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		7C07468D1CFAEF0400DA88AB /* PopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
 		7C397BA61CF4A2EB00F2C262 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		7C9E2E3E1CF1A37A00AAE465 /* 微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9E2E411CF1A37A00AAE465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				7CFB61871CF99AA00016231A /* PopoverViewController.storyboard */,
 				7C07468B1CFAE95300DA88AB /* PopoverViewController.swift */,
 				7CFB61891CF99F300016231A /* PopoverPresentationController.swift */,
+				7C07468D1CFAEF0400DA88AB /* PopoverAnimator.swift */,
 			);
 			path = Popover;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				7C9E2E7A1CF1AA9400AAE465 /* HomeTableViewController.swift in Sources */,
 				7C9E2E441CF1A37A00AAE465 /* ViewController.swift in Sources */,
 				7C9E2E7C1CF1AAA700AAE465 /* DiscoverTableViewController.swift in Sources */,
+				7C07468E1CFAEF0400DA88AB /* PopoverAnimator.swift in Sources */,
 				7CF06B601CF1C3880086A4B4 /* NullViewController.swift in Sources */,
 				7C07468C1CFAE95300DA88AB /* PopoverViewController.swift in Sources */,
 				7CF06B641CF1FA960086A4B4 /* VisitorView.swift in Sources */,
