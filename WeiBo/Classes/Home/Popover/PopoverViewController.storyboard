@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Popover View Controller-->
         <scene sceneID="7uh-uH-rWr">
             <objects>
-                <viewController id="crW-t8-I1x" sceneMemberID="viewController">
+                <viewController id="crW-t8-I1x" customClass="PopoverViewController" customModule="微博" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MfM-T3-KbU"/>
                         <viewControllerLayoutGuide type="bottom" id="UaN-hi-u3p"/>
