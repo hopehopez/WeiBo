@@ -11,6 +11,7 @@ import AVFoundation
 
 class QRCodeViewController: UIViewController , UITabBarDelegate{
 
+    @IBOutlet weak var messageLb: UILabel!
     @IBOutlet weak var scanView: UIView!
     @IBOutlet weak var containerHeightCons: NSLayoutConstraint!
     @IBOutlet weak var top_constraint: NSLayoutConstraint!
@@ -63,9 +64,13 @@ class QRCodeViewController: UIViewController , UITabBarDelegate{
         
         //设置输出对象 的代理
         output.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
+        //output.rectOfInterest = CGRectMake(0, 0, 1, 1)
 
         //添加预览图层
         view.layer.insertSublayer(previewLayer, atIndex: 0)
+        
+        //添加绘制图层到预览图层上
+        previewLayer.addSublayer(drawerLayer)
         
         session.startRunning()
     }
@@ -109,11 +114,77 @@ class QRCodeViewController: UIViewController , UITabBarDelegate{
         return layer
     }()
     
+    //创建用于绘制边线的图层
+    private lazy var drawerLayer: CALayer = {
+        let layer = CALayer()
+        layer.frame = UIScreen.mainScreen().bounds
+        return layer
+    }()
+    
 }
 
 extension QRCodeViewController: AVCaptureMetadataOutputObjectsDelegate {
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
-        print(metadataObjects.last?.stringValue)
         
+        //1. 获取扫描到的数据
+        print(metadataObjects.last?.stringValue)
+        messageLb.text = metadataObjects.last?.stringValue
+        
+        //2. 获取扫描到的二维码的位置
+        for obj in metadataObjects {
+            //2.1 判断当前获取到的对象 是否是机器可识别的类型
+            if obj is AVMetadataMachineReadableCodeObject {
+                
+                //2.2 将坐标转换成界面可识别的坐标
+                let codeObject = previewLayer.transformedMetadataObjectForMetadataObject(obj as! AVMetadataObject) as! AVMetadataMachineReadableCodeObject
+               drawLines(codeObject)
+            }
+        }
+        
+    }
+    
+    private func drawLines (obj: AVMetadataMachineReadableCodeObject) {
+        if obj.corners.isEmpty {
+            return
+        }
+        
+        clearCorners()
+        
+        //1. 创建图层
+        let layer = CAShapeLayer()
+        layer.borderWidth = 4;
+        layer.strokeColor = UIColor.redColor().CGColor
+        layer.fillColor = UIColor.clearColor().CGColor
+        
+        //2. 创建路径
+        let path = UIBezierPath()
+        var point = CGPointZero
+        var index: Int = 0
+        //2.1移动到第一个点
+        CGPointMakeWithDictionaryRepresentation((obj.corners[index++] as! CFDictionaryRef ), &point)
+        path.moveToPoint(point)
+        //2.2移动到其他点
+        while index < obj.corners.count {
+            CGPointMakeWithDictionaryRepresentation((obj.corners[index++] as! CFDictionaryRef) , &point)
+            path.addLineToPoint(point)
+        }
+        //2.3 关闭路径
+        path.closePath()
+        
+        //2.4 绘制路径
+        layer.path = path.CGPath
+        
+        //3 添加到图层
+        drawerLayer.addSublayer(layer)
+    
+    }
+    
+    private func clearCorners() {
+        if drawerLayer.sublayers == nil || drawerLayer.sublayers?.count == 0 {
+            return
+        }
+        for layer in drawerLayer.sublayers! {
+            layer.removeFromSuperlayer()
+        }
     }
 }

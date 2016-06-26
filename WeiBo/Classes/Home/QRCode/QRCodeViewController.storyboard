@@ -89,12 +89,22 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHi-ad-gvp">
+                                <rect key="frame" x="36" y="90" width="248" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="FHi-ad-gvp" firstAttribute="leading" secondItem="bKp-7d-771" secondAttribute="leadingMargin" constant="20" id="TKL-Dh-mRe"/>
                             <constraint firstItem="JdS-V0-ZA2" firstAttribute="centerY" secondItem="bKp-7d-771" secondAttribute="centerY" id="Vbu-Fh-zHW"/>
                             <constraint firstItem="JdS-V0-ZA2" firstAttribute="centerX" secondItem="bKp-7d-771" secondAttribute="centerX" id="eSC-EI-rsR"/>
+                            <constraint firstItem="FHi-ad-gvp" firstAttribute="centerX" secondItem="bKp-7d-771" secondAttribute="centerX" id="fOY-bt-ky7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kK9-5B-7cY" secondAttribute="trailing" constant="-20" id="hn7-kW-zOk"/>
+                            <constraint firstItem="FHi-ad-gvp" firstAttribute="top" secondItem="oUx-I7-l9q" secondAttribute="bottom" constant="26" id="lNg-PW-PMd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FHi-ad-gvp" secondAttribute="trailing" constant="20" id="oh8-56-WVw"/>
                             <constraint firstItem="KGN-rw-veF" firstAttribute="top" secondItem="kK9-5B-7cY" secondAttribute="bottom" id="sZT-SR-yyD"/>
                             <constraint firstItem="kK9-5B-7cY" firstAttribute="leading" secondItem="bKp-7d-771" secondAttribute="leadingMargin" constant="-20" id="zVu-hI-crE"/>
                         </constraints>
@@ -113,13 +123,14 @@
                     <connections>
                         <outlet property="containerHeightCons" destination="4xI-BY-bJD" id="BvE-R3-hcK"/>
                         <outlet property="customTabBar" destination="kK9-5B-7cY" id="2JX-wl-va6"/>
+                        <outlet property="messageLb" destination="FHi-ad-gvp" id="7oP-eA-yMC"/>
                         <outlet property="scanView" destination="JdS-V0-ZA2" id="Jyq-Ix-Dap"/>
                         <outlet property="top_constraint" destination="MAc-rA-TaJ" id="VGf-so-Duw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7N-mb-Zc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="211" y="-123"/>
+            <point key="canvasLocation" x="160" y="-244"/>
         </scene>
     </scenes>
     <resources>
