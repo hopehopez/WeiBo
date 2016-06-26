@@ -51,12 +51,6 @@ class HomeTableViewController: BaseTableViewController {
         navigationItem.titleView = titleBtn
     }
     
-    func leftItemClick() {
-        print("点了左边的")
-    }
-    func rightItemClick() {
-        print("点了右边的")
-    }
     func titleBtnClick(btn: UIButton) {
         //1.修改箭头方向
         //btn.selected = !btn.selected;
@@ -75,6 +69,18 @@ class HomeTableViewController: BaseTableViewController {
         vc?.modalPresentationStyle = UIModalPresentationStyle.Custom
         presentViewController(vc!, animated: true, completion: nil)
         
+    }
+
+    func leftItemClick() {
+        print("点了左边的")
+    }
+    func rightItemClick() {
+        
+        let sb = UIStoryboard(name: "QRCodeViewController", bundle: nil)
+        let vc = sb.instantiateInitialViewController()
+
+        presentViewController(vc!, animated: true, completion: nil)
+
     }
     
     //MARK: - 懒加载

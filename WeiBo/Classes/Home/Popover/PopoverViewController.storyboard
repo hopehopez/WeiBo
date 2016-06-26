@@ -15,14 +15,14 @@
                         <viewControllerLayoutGuide type="bottom" id="UaN-hi-u3p"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="q23-Rz-q5v">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popover_background" translatesAutoresizingMaskIntoConstraints="NO" id="MSV-Ox-uff">
-                                <rect key="frame" x="20" y="0.0" width="560" height="600"/>
+                                <rect key="frame" x="16" y="0.0" width="288" height="568"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2X3-oD-RvT">
-                                <rect key="frame" x="40" y="40" width="520" height="540"/>
+                                <rect key="frame" x="36" y="40" width="248" height="508"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -38,6 +38,7 @@
                             <constraint firstItem="MSV-Ox-uff" firstAttribute="leading" secondItem="q23-Rz-q5v" secondAttribute="leadingMargin" id="x6O-ln-3zE"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GKg-ID-gtZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
